@@ -11,7 +11,7 @@ class MyArray{
     get(index){
         return this.data[index];
     }
-    //Agregar un elemento
+    //Agregar un elemento al final
     push(item){
         this.data[this.lenght] = item;
         this.lenght++;
