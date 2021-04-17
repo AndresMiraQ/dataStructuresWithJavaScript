@@ -11,12 +11,16 @@ class MyStacks{
     }
     //Eliminar el último elemento
     pop(){
-        //Cúal es el elemento que se eliminará
-        const lastItem = this.data[this.lenght - 1];
-        //Eliminar elemento
-        delete this.data[this.lenght - 1];
-        this.lenght--;
-        return lastItem;
+        if(!this.data){
+            return undefined;
+        }else{
+            //Cúal es el elemento que se eliminará
+            const lastItem = this.data[this.lenght - 1];
+            //Eliminar elemento
+            delete this.data[this.lenght - 1];
+            this.lenght--;
+            return lastItem;
+        }    
     }
     peek(){
         return this.data[this.lenght - 1];
